@@ -73,7 +73,12 @@ $ simavr -g -m atmega328 -f 16000000 demo.hex
 $ r2 -a avr -d gdb://localhost:1234
 ~~~
 
-## dump
+## dump programmer stk500
 ~~~
-$ avrdude -F -v -pm328p -cstk500 -P/dev/ttyUSB0 -D -Uflash:r:reverse.hex:i
+$ avrdude -F -v -p m328p -c stk500 -P /dev/ttyUSB0 -D -U flash:r:reverse.hex:i
+~~~
+
+## dump programmer arduino
+~~~
+$ avrdude -F -v -p m328p -c arduino -P /dev/ttyUSB0 -D -U flash:r:reverse.hex:i
 ~~~
