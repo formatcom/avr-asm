@@ -24,11 +24,12 @@ $ avr-objdump -h -S demo.elf
 ## the .data section 
 ### ref: https://www.microchip.com/webdoc/AVRLibcReferenceManual/mem_sections_1sec_dot_data.html
 ~~~
-REF: https://www.microchip.com/webdoc/AVRLibcReferenceManual/mem_sections_1sec_dot_noinit.html#mem_sections_1harvard_arch
+REF:
+microchip.com/webdoc/AVRLibcReferenceManual/mem_sections_1sec_dot_noinit.html#mem_sections_1harvard_arch
 
-Because of the Harvard architecture of the AVR devices, you must manually add 0x800000 to the address you pass
-to the linker as the start of the section. Otherwise, the linker thinks you want to put the .noinit section into
-the .text section instead of .data/.bss and will complain.
+Because of the Harvard architecture of the AVR devices, you must manually add 0x800000 to the address
+you pass to the linker as the start of the section. Otherwise, the linker thinks you want to put the
+.noinit section into the .text section instead of .data/.bss and will complain.
 
 
 - Harvard architecture 
