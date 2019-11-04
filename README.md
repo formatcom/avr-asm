@@ -11,7 +11,7 @@
 
 # BUILD
 ~~~
-$ avr-gcc -g -Os -mmcu=atmega328 -o demo.elf hello.c
+$ avr-gcc -Wall -g -Os -mmcu=atmega328 -o demo.elf hello.c
 ~~~
 
 ### ENTRYPOINT -> Vector Reset
@@ -33,12 +33,12 @@ the .text section instead of .data/.bss and will complain.
 
 - Harvard architecture 
 
---------------------                        -------------------                         ------------------
-|		   |       address bus      |                 |      address bus        |                |
-|  Program Memory  |    <----------------   |                 |   ----------------->    |   Data Memory  |
-|	(ROM)      |       data bus         |      (CPU)      |      data bus           |      (RAM)     |
-|		   |    ---------------->   |                 |   <-----------------    |                |
---------------------                        -------------------                         ------------------
+--------------------                      -------------------                      ------------------
+|		   |       address bus    |                 |     address bus      |                |
+|  Program Memory  |    <--------------   |                 |   -------------->    |   Data Memory  |
+|	(ROM)      |       data bus       |      (CPU)      |      data bus        |      (RAM)     |
+|		   |    -------------->   |                 |   <--------------    |                |
+--------------------                      -------------------                      ------------------
 ~~~
 
 # AVR Memory Usage
