@@ -82,3 +82,8 @@ $ avrdude -F -v -p m328p -c stk500 -P /dev/ttyUSB0 -D -U flash:r:reverse.hex:i
 ~~~
 $ avrdude -F -v -p m328p -c arduino -P /dev/ttyUSB0 -D -U flash:r:reverse.hex:i
 ~~~
+
+## upload data arduino uno
+~~~
+$ avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -U flash:w:demo.hex
+~~~
